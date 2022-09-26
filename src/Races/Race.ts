@@ -1,8 +1,6 @@
-import { IRace } from '../Interfaces/Race';
-
 export const NOT_IMPLEMENTED = 'Not implemented';
 
-export default abstract class Race implements IRace {
+export default abstract class Race {
   constructor(
     private _name: string,
     private _dexterity: number,
@@ -16,7 +14,7 @@ export default abstract class Race implements IRace {
     return this._dexterity;
   }
 
-  static get createdRacesInstances(): void {
+  static createdRacesInstances(): number {
     throw new Error(NOT_IMPLEMENTED);
   }
 
