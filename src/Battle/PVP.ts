@@ -1,6 +1,5 @@
 import Fighter from '../Fighter';
 import Battle from './Battle';
-import Character from '../Character';
 
 export default class PVP extends Battle {
   constructor(
@@ -10,7 +9,7 @@ export default class PVP extends Battle {
     super(_player1);
   }
  
-  public fight(): number | undefined {
+  public fight(): number {
     console.log(`
       DOIS HEROIS TRAVARAM UMA BATALHA
       MAS AQUI POR ESTAS TERRAS, NÃO EXISTE PIEDADE
@@ -30,10 +29,3 @@ export default class PVP extends Battle {
     return super.fight();
   }
 }
-
-const lutador1 = new Character('lutador 1');
-const lutador2 = new Character('lutador 2');
-
-const primeiraBatalha = new PVP(lutador1, lutador2);
-
-primeiraBatalha.fight();
